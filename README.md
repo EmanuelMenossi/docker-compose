@@ -1,8 +1,8 @@
 # docker-compose atividade final
 ## Links:
 <ul>
-<li>GITHUB: https://github.com/EmanuelMenossi/docker-compose<li>
-<li>DOCKER HUB: https://hub.docker.com/repository/docker/emanuelmenossi/nodejs-app/general<li>
+<li>GITHUB: https://github.com/EmanuelMenossi/docker-compose
+<li>DOCKER HUB: https://hub.docker.com/repository/docker/emanuelmenossi/nodejs-app/general
 </ul>
 
 ## COMANDOS NO TERMINAL

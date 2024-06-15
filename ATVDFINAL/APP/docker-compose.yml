@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: achilesDB
+      MYSQL_USER: user
+      MYSQL_PASSWORD: passwd
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./carga.sql:/docker-entrypoint-initdb.d/carga.sql
+
+  nodejs:
+    image: emanuelmenossi/nodejs-app:7.0.0
+    container_name: nodejs-container
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: achilesDB
+      DB_PORT: 3306
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
